@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Form</title>
+</head>
+<body style="font-family: 'Franklin Gothic Medium';">
+    <div>
+        <center>
+            <form id="form" onsubmit="submit_form(); return false;">
+                <p>Type your first name</p>
+                <input id="userFirstName" type="text" required pattern="[a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+( [a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+)*$" autofocus/>
+                <p>Type your last name</p>
+                <input id="userLastName" type="text" required pattern="[a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+( [a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+)*$"/>
+                <p>Type your phone number</p>
+                <div>
+                    <input style="width: 28px;" id="userPhonePrefix" type="tel"placeholder="+99" pattern="[+]\d{2}" value="+55" required/>
+                    <input style="width: 96px;" id="userPhone" type="tel" placeholder="99 99999-9999" pattern="(\d{2}[9]{1}[0-9]{8})|(\d{2}[0-9]{8})" required/>
+                </div>
+                <p>Type your CEP</p>
+                <input id="userCEP" type="text" style="width: 96px;" placeholder="99999-999" pattern="(\d{5}(-|.)\d{3})|\d{8}" required/>
+                <p>Type your birthday</p>
+                <input id="userBirthday" type="date" required/>
+                <p>Type your CPF</p>
+                <input id="userCPF" type="text" style="width: 96px;" placeholder="999.999.999-99" pattern="(\d{3}(.)\d{3}(.)\d{3}(-)\d{2})|\d{11}" required/>
+                <p>Type your email</p>
+                <input id="userEmail" type="email" placeholder="example@example.com" required/><br><br><br>
+                <button id="send" type="submit">send</button>
+            </form>
+        </center>
+    </div>
+    <p id="treatedData"></p>
+
+    <script src="form.js"></script>
+</body>
+</html>
