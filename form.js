@@ -1,10 +1,6 @@
 let userFirstName = '', userLastName = '', userFullName = '';
 let userBirthday = '', userBirthYear = '', userBirthMonth = '', userBirthDay = '';
-let userCPF = '';
-let birthday = '';
-let userPhone = '';
-let userCEP = '';
-let userEmail = '';
+let userCPF = '', birthday = '', userPhone = '', userCEP = '', userEmail = '';
 let isEmailCooporative = false;
 let isEmailEducational = false;
 
